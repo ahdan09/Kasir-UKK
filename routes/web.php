@@ -34,7 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('pelanggan', PelangganController::class);
     Route::resource('category', CategoryController::class);
     Route::resource('product', ProductController::class);
-    Route::resource('transaksi', TransaksiController::class)->middleware('petugas');
+    Route::resource('transaksi', TransaksiController::class);
     Route::get('/get-product-details/{id}',[TransaksiController::class,'getProductDetails'])->name('getProductDetails');
     Route::get('/nota/{id}',[TransaksiController::class,'Nota'])->name('nota');
 });

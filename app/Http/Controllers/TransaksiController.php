@@ -54,7 +54,7 @@ class TransaksiController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->all());
+        dd($request->all());
         $kasir = Auth::User()->name;
         $validate = $request->validate([
             'id_pelanggan' => 'required|exists:pelanggans,id',
